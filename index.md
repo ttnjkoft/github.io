@@ -1,37 +1,51 @@
-## Welcome to GitHub Pages
 
-You can use the [editor on GitHub](https://github.com/ttnjkoft/github.io/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+# Orange Pi Lite2 安裝和配置OpenMediaVault 
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+* 準備工具
 
-### Markdown
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+系統一定要是Debian Buster
 
-```markdown
-Syntax highlighted code block
+* 下載系統印像檔
+  http://www.orangepi.org/downloadresources/
+* 使用USB Image Tool將印像檔燒進sd卡
+* ![image-20210906143902314](C:\Users\Ronald\AppData\Roaming\Typora\typora-user-images\image-20210906143902314.png)
+* 更新
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```sh
+  sudo apt update && sudo apt -y upgrade
+  sudo reboot
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+## 安裝openmediavaul
 
-### Jekyll Themes
+* 這個過程非常的久
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/ttnjkoft/github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+```sh
+wget -O - https://github.com/OpenMediaVault-Plugin-Developers/installScript/raw/master/install | sudo bash
+```
 
-### Support or Contact
+接下來這個**很重要!!**因為openmediavaul安裝完後會將原本的網路管理工具刪掉，所以一定要先用瀏覽器連上Orange Pi Lite2 的ip去新增網路，登入帳密:
+user:admin
+password : openmediavault
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+* 進入系統裡的網路新增wifi介面卡
+  ![image-20210804161431997](C:\Users\Ronald\AppData\Roaming\Typora\typora-user-images\image-20210804161431997.png)／
+
+
+
+
+
+* 安裝插件，不然會看不到分享資料匣
+  ![image-20210806100333016](C:\Users\Ronald\AppData\Roaming\Typora\typora-user-images\image-20210806100333016.png)
+
+* 
+
+* 設定完利用介面重開 Orange Pi Lite2
+
+  ![image-20210804161926430](C:\Users\Ronald\AppData\Roaming\Typora\typora-user-images\image-20210804161926430.png)
+
+
+
+
+
