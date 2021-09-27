@@ -1,5 +1,5 @@
 ## 設定
-![image-20210916111243219](C:\Users\Ronald\AppData\Roaming\Typora\typora-user-images\image-20210916111243219.png)
+
 
 rollor_in:滾輪decoder的訊號
 
